@@ -13,16 +13,16 @@ export class HeapSort {
       this.heapify(n, i);
     }
 
-    // 2. Extrair elementos do heap
+    
     for (let i = n - 1; i > 0; i--) {
-      this.swap(0, i);     // Move o maior para o final
-      this.heapify(i, 0); // Reorganiza o heap reduzido
+      this.swap(0, i);     
+      this.heapify(i, 0); 
     }
 
     return this.arr;
   }
 
-  // Garante a propriedade do heap
+  
   private heapify(size: number, root: number): void {
     let largest = root;
     const left = 2 * root + 1;
@@ -50,4 +50,3 @@ const valores = [9,0,5,8,2,1];
 const heapSort = new HeapSort(valores);
 
 console.log(heapSort.sort());
-// [1, 3, 4, 5, 10]
